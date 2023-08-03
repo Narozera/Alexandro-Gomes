@@ -1,0 +1,20 @@
+---
+import {services} from '../constants/index'
+---
+
+<section class="bg-primary p-5">
+    <div class="container mx-auto">
+    <h1 class="font-bold text-light text-[1.8rem] mt-10">ÁREAS DE ATUAÇÃO</h1>
+    <div class=" grid xl:grid-cols-3 gap-10 mt-20">
+        {
+            services.map((item) => (
+                <div class="bg-terciary w-[380px] h-[200px]">
+                    <div class="h-[90px] w-[90px] rounded-full border border-primary flex justify-center items-center">
+                    <img src={item.icon} alt={item.alt} />
+                </div>
+                </div>
+            ))
+        }
+        </div>
+    </div>
+</section>

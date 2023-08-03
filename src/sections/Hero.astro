@@ -1,0 +1,43 @@
+---
+import Header2 from '../components/Header/Header2'
+---
+
+<main class={`bg-[url(/hero.png)] h-[500px] bg-cover bg-center bg-no-repeat min-w-full relative`}>
+    <Header2 client:only="react" />
+    <div class="container mx-auto">
+    <h1 class="absolute bottom-[40%] font-bold text-light text-[2rem] w-[370px]">PROFISSIONAL EM DEFENDER OS SEUS DIREITOS</h1>
+</div>
+    <!-- <div
+    class="hidden lg:block lg:absolute right-0 left-0 text-center top-[60%]"
+  > -->
+  <div
+  class="container mx-auto absolute right-0 left-0 text-center top-[80%]"
+>
+    <div
+      class="flex flex-wrap lg:flex-nowrap justify-end gap-10" 
+    >
+      <div class="h-[310px] w-[275px] bg-[#2F3861] rounded-[10px] shadow-xl relative">
+        <div class="h-[150px] w-[150px] rounded-full bg-[#2F3861] absolute top-[-85px] left-1/2 -translate-x-1/2 flex justify-center items-center"><img src="medal.svg" alt="Medalha"></div>
+        <h2 class="uppercase text-light font-bold w-[200px]  text-[1.2rem] mx-auto text-center mt-[4.3rem]">ESCRITÓRIO REFERÊNCIA</h2>
+        <p class="text-light text-[1.1rem] w-[244px] h-[110px] mx-auto mt-[28px]">Profundo conhecimento da legislação e das jurisprudências sendo referência nas áreas de atuação.</p>
+      </div>
+
+      <div class="h-[310px] w-[275px] bg-[#27356F] rounded-[10px] shadow-xl relative">
+        <div class="h-[150px] w-[150px] rounded-full bg-[#27356F] absolute top-[-85px] left-1/2 -translate-x-1/2 flex justify-center items-center"><img src="internet.svg" alt="Internet"></div>
+        <h2 class="uppercase text-light font-bold w-[200px]  text-[1.2rem] mx-auto text-center mt-[4.3rem]">CONSULTA ONLINE OU PRESENCIAL</h2>
+        <p class="text-light text-[1.1rem] w-[244px] h-[110px] mx-auto mt-[28px]">Possuímos sistemas modernos de videoconferência e atendimento presencial. 
+            Você escolhe.</p>
+      </div>
+
+      <div class="h-[310px] w-[275px] bg-[#465AAC] rounded-[10px] shadow-xl relative">
+        <div class="h-[150px] w-[150px] rounded-full bg-[#465AAC] absolute top-[-85px] left-1/2 -translate-x-1/2 flex justify-center items-center"><img src="telemarketer.svg" alt="Telemarketer"></div>
+        <h2 class="uppercase text-light font-bold w-[200px]  text-[1.2rem] mx-auto text-center mt-[4.3rem]">ATENDIMENTO HUMANIZADO</h2>
+        <p class="text-light text-[1.1rem] w-[244px] h-[110px] mx-auto mt-[28px]">Sua consulta 
+            será conduzida
+             por profissionais especialistas na área, 
+            sem uso de robôs.</p>
+      </div>
+    </div>
+  </div>
+
+  </main>
