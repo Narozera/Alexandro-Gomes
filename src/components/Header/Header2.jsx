@@ -3,16 +3,15 @@ import { Transition } from "@headlessui/react";
 import styles from "../../styles";
 import "./Header.css";
 
-
-
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logoSrc, setLogoSrc] = useState("/logo-header.svg");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const isPageScrolled = scrollPosition > 400;
+      const isPageScrolled = scrollPosition > 200;
       setIsScrolled(isPageScrolled);
     };
 
@@ -20,6 +19,26 @@ function Nav() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1440) {
+        setLogoSrc("/logo-footer.svg");
+      } else {
+        setLogoSrc("/logo-header.svg");
+      }
+    };
+
+    handleResize(); // Executa a verificação inicial quando o componente é montado.
+
+    // Adiciona um listener para o evento de redimensionamento da janela
+    window.addEventListener("resize", handleResize);
+
+    // Remove o listener quando o componente é desmontado para evitar memory leaks.
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -34,13 +53,22 @@ function Nav() {
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
-          <div className="flex h-[100px]  items-center justify-between">
+            <div className="flex h-[100px] items-center justify-between">
               <div className="flex-shrink-0">
                 <a href="/" aria-label="Logo">
-                      <img
-                      src="/logo-footer.svg"
+                  {isOpen || isScrolled ? (
+                    <img
+                      className="w-[150px] sm:w-auto"
+                      src="logo-footer.svg"
                       alt="Logo"
                     />
+                  ) : (
+                    <img
+                      className="w-[150px] sm:w-auto"
+                      src={logoSrc}
+                      alt="Logo"
+                    />
+                  )}
                 </a>
               </div>
               <div className="hidden lg:block">
@@ -88,52 +116,52 @@ function Nav() {
                   </div> */}
                 </div>
               </div>
-          
-            <div className="-mr-2 flex lg:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Open main menu</span>
-                {!isOpen ? (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="#fff"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="#fff"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                )}
-              </button>
+
+              <div className="-mr-2 flex lg:hidden">
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  type="button"
+                  className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false"
+                >
+                  <span className="sr-only">Open main menu</span>
+                  {!isOpen ? (
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke={isScrolled ? "#fff" : "#000"}
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="#fff"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
-          </div>
           </div>
         </div>
 
