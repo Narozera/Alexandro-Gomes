@@ -1,29 +1,33 @@
+---
+import { links } from "../../constants";
+---
+
 <footer class="bg-primary p-5">
     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3">
         <div class="my-auto">
-            <img src="logo-footer.svg" alt="Logo" >
+            <a href="/"><img src="logo-footer.svg" alt="Logo" ></a>
         </div>
 
         <div class="mx-auto mt-10 text-center sm:text-start sm:mt-[12px]">
             <ul class="text-light">
                 <li class="font-bold text-[1rem]">Mapa do site</li>
-                <a><li class="text-[1rem] mt-[12px]">Home</li></a>
-                <a><li class="text-[1rem] mt-[12px]">Sobre</li></a>
-                <a><li class="text-[1rem] mt-[12px]">Contato</li></a>
-                <a><li class="text-[1rem] mt-[12px]">Serviços</li></a>
+                <li class="text-[1rem] mt-[12px] hover:text-[#FFF082] ease-linear transform delay-50"><a href="/">Home</a></li>
+                <li class="text-[1rem] mt-[12px] hover:text-[#FFF082] ease-linear transform delay-50"><a href="#sobre-nós">Sobre</a></li>
+                <li class="text-[1rem] mt-[12px] hover:text-[#FFF082] ease-linear transform delay-50"><a href="#contato">Contato</a></li>
+                <li class="text-[1rem] mt-[12px] hover:text-[#FFF082] ease-linear transform delay-50"><a href="#serviços">Serviços</a></li>
             </ul>
         </div>
 
         <div class="mx-auto mt-10 text-center sm:text-start sm:mt-[12px]">
             <ul class="text-light">
                 <li class="font-bold text-[1rem]">Contato</li>
-                <a><li class="text-[1rem] mt-[12px]">(11) 987155928</li></a>
-                <a><li class="text-[1rem] mt-[12px]">contato@alexandro.com</li></a>
-                <a><li class="text-[1rem] mt-[12px]">Seg-Sex: 08h às 18h</li></a>
+                <li class="text-[1rem] mt-[12px] hover:text-[#FFF082] ease-linear transform delay-50"><a href={links[0]} target="_blank">(11) 987155928</a></li>
+                <li class="text-[1rem] mt-[12px] hover:text-[#FFF082] ease-linear transform delay-50"><a href={links[1]} target="_blank">contato@alexandro.com</a></li>
+                <li class="text-[1rem] mt-[12px] hover:text-[#FFF082] ease-linear transform delay-50"><a href={links[2]} target="_blank">Seg-Sex: 08h às 18h</a></li>
             </ul>
             <div class="flex gap-3 mt-[12px] justify-center sm:justify-normal">
-                <a><img src="facebook-footer.svg" alt="Facebook"></a>
-                <a><img src="linkedin-footer.svg" alt="Linkedin"></a>
+                <a href={links[4]}><img src="facebook-footer.svg" alt="Facebook"></a>
+                <a href={links[3]}><img src="linkedin-footer.svg" alt="Linkedin"></a>
             </div>
         </div>
     </div>

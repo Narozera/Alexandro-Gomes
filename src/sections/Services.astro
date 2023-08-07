@@ -2,7 +2,7 @@
 import {services} from '../constants/index'
 ---
 
-<section class="bg-primary p-5">
+<section class="bg-primary p-5" id="serviços">
     <div class="container mx-auto pb-16">
     <h1 class="font-bold text-light text-[1.8rem] mt-10 text-center lg:text-start">ÁREAS DE ATUAÇÃO</h1>
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
@@ -14,7 +14,7 @@ import {services} from '../constants/index'
                 </div>
 
                 <h3 class="text-light font-bold text-[1.2rem] mt-[10px] mb-[10px] ml-[21px]">{item.title}</h3>
-                <a href={item.link} class="text-light text-[1rem] ml-[21px] hover:text-primary">SAIBA MAIS</a>
+                <a href={item.link} class="text-light text-[1rem] ml-[21px] hover:text-primary ease-linear transition delay-50">SAIBA MAIS</a>
                 </div>
             ))
         }

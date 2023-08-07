@@ -5,6 +5,13 @@ import axios from "axios";
 const Form = () => {
   const baseUrl = "https://api-guellas.vercel.app";
 
+  const [data, setData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
   function send() {
     const formData = new FormData();
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
@@ -21,13 +28,6 @@ const Form = () => {
         alert("Ocorreu um erro, por favor tente novamente");
       });
   }
-
-  const [data, setData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -83,7 +83,6 @@ const Form = () => {
   };
   calculateProgress();
 
-
   return (
     <>
       <div className="bar-container">
@@ -92,9 +91,9 @@ const Form = () => {
       <div className="mt-8 bg-primary">
         <form
           onSubmit={handleClick}
-          className="bg-[#fff] px-1 mb-10 w-full  sm:w-[400px] shadow-sm shadow-[#ccc] lg:mb-0 xl:min-h-[750px] xl:w-[500px] border border-[#E8E8E8] rounded-[20px] z-[998]"
+          className="bg-[#fff] px-1 mb-10 w-full py-10 sm:w-[400px] shadow-sm shadow-[#ccc] lg:mb-0 xl:min-h-[750px] xl:w-[500px] border border-[#E8E8E8] rounded-[20px] z-[998]"
         >
-          <div className="flex items-center justify-center my-10">
+          <div className="flex items-center justify-center mb-10">
             <img
               src="/email-form.svg"
               alt="Email"
@@ -152,7 +151,7 @@ const Form = () => {
                 className={
                   calculateProgress() !== 100
                     ? "w-[310px] bg-[#A9A9A9] font-bold py-auto px-auto rounded-full h-[60px] text-[1.2rem] text-[#fff]"
-                    : "w-[310px] bg-primary font-bold py-auto px-auto rounded-full h-[60px] text-[1.2rem] text-[#fff]"
+                    : "w-[310px] bg-primary font-bold py-auto px-auto rounded-full h-[60px] text-[1.2rem] text-[#fff] hover:bg-terciary ease-linear transition delay-50"
                 }
               >
                 Enviar

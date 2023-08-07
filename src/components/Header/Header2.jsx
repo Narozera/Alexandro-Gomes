@@ -6,12 +6,11 @@ import "./Header.css";
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState("/logo-header.svg");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const isPageScrolled = scrollPosition > 200;
+      const isPageScrolled = scrollPosition > 80;
       setIsScrolled(isPageScrolled);
     };
 
@@ -19,26 +18,6 @@ function Nav() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1440) {
-        setLogoSrc("/logo-footer.svg");
-      } else {
-        setLogoSrc("/logo-header.svg");
-      }
-    };
-
-    handleResize(); // Executa a verificação inicial quando o componente é montado.
-
-    // Adiciona um listener para o evento de redimensionamento da janela
-    window.addEventListener("resize", handleResize);
-
-    // Remove o listener quando o componente é desmontado para evitar memory leaks.
-    return () => {
-      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -53,19 +32,19 @@ function Nav() {
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
-            <div className="flex h-[100px] items-center justify-between">
+            <div className="flex h-[40px] items-center justify-between">
               <div className="flex-shrink-0">
                 <a href="/" aria-label="Logo">
                   {isOpen || isScrolled ? (
                     <img
-                      className="w-[150px] sm:w-auto"
+                      className="w-[200px] sm:w-auto"
                       src="logo-footer.svg"
                       alt="Logo"
                     />
                   ) : (
                     <img
-                      className="w-[150px] sm:w-auto"
-                      src={logoSrc}
+                      className="w-[200px] sm:w-auto"
+                      src="/logo-header2.svg"
                       alt="Logo"
                     />
                   )}
@@ -74,18 +53,18 @@ function Nav() {
               <div className="hidden lg:block">
                 <div className="mx-10 flex items-center w-full">
                   <ul className="font-geom uppercase flex gap-[2.5rem] mb-4 mt-2 flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-                    <li as="li" className={`${styles.navbarLink}`}>
+                    <li as="li">
                       <a
                         href="/"
-                        className={`${styles.navbarLink} link link-underline pb-2 text-[1rem]`}
+                        className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
                       >
                         home
                       </a>
                     </li>
                     <li as="li" className={styles.navbarLink}>
                       <a
-                        href="/sobre-nos"
-                        className={`${styles.navbarLink} link link-underline pb-2 text-[1rem]`}
+                        href="#sobre-nós"
+                        className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
                       >
                         Sobre
                       </a>
@@ -94,26 +73,12 @@ function Nav() {
                     <li as="li" className={styles.navbarLink}>
                       <a
                         href="#contato"
-                        className={`${styles.navbarLink} link link-underline pb-2 text-[1rem]`}
+                        className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
                       >
                         contato
                       </a>
                     </li>
                   </ul>
-                  {/* <div className="flex space-x-[1rem] items-center">
-                    <a
-                      href="https://www.linkedin.com/company/mfer-servicos-ltda?originalSubdomain=br"
-                      target="_blank"
-                    >
-                      <img src="/linkedin.svg" alt="Linkedin logo" />
-                    </a>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=5511913392992"
-                      target="_blank"
-                    >
-                      <img src="/whatsapp.svg" alt="Linkedin logo" />
-                    </a>
-                  </div> */}
                 </div>
               </div>
 
@@ -132,7 +97,7 @@ function Nav() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke={isScrolled ? "#fff" : "#000"}
+                      stroke={isScrolled ? "#fff" : "#fff"}
                       aria-hidden="true"
                     >
                       <path
@@ -205,20 +170,6 @@ function Nav() {
                       </a>
                     </li>
                   </div>
-                  {/* <div className="flex space-x-[1rem] pt-[2rem] items-center">
-                    <a
-                      href="https://www.linkedin.com/company/mfer-servicos-ltda?originalSubdomain=br"
-                      target="_blank"
-                    >
-                      <img src="/linkedin.svg" alt="Linkedin logo" />
-                    </a>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=5511913392992"
-                      target="_blank"
-                    >
-                      <img src="/whatsapp.svg" alt="Linkedin logo" />
-                    </a>
-                  </div> */}
                 </div>
               </div>
             </div>

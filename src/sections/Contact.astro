@@ -3,16 +3,16 @@ import Form from "../components/Form/Form";
 import Maps from "../components/Maps/Maps.astro";
 ---
 
-<secion>
+<section id="contato">
   <div class="container mx-auto pb-16">
     <h1 class="mt-10 mb-10 text-primary text-[1.8rem] font-bold uppercase text-center xl:text-start">
       Fale Conosco
     </h1>
     <div class="flex flex-wrap justify-between">
       <div class="mx-auto">
-        <Form />
+        <Form client:load/>
       </div>
       <div class="mx-auto"><Maps /></div>
     </div>
   </div>
-</secion>
+</section>

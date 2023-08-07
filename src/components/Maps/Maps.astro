@@ -1,3 +1,8 @@
+---
+import { links } from "../../constants";
+
+---
+
 <div class="sm:mx-5 lg:mt-10 2xl:mt-0">
   <div class="flex flex-wrap sm:gap-2">
     <div class="w-[300px] mx-auto mt-5 lg:w-[270px] lg:mx-0 lg:mt-0">
@@ -33,11 +38,12 @@
       style="border:0;"
       allowfullscreen=""
       loading="lazy"
+      title="Mapa"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <div class="flex justify-center 2xl:justify-normal gap-5 mt-10">
-    <a href="#"><img src="/whatsapp.svg" alt="Whatsapp" /></a>
-    <a href="#"><img src="/facebook-contact.svg" alt="Facebook" /></a>
-    <a href="#"><img src="/linkedin-contact.svg" alt="Linkedin" /></a>
+    <a href={links[0]} target="_blank"><img class="h-[45px] w-[45px]" src="/whatsapp.svg" alt="Whatsapp" /></a>
+    <a href={links[4]} target="_blank"><img class="h-[45px] w-[45px]" src="/facebook-contact.svg" alt="Facebook" /></a>
+    <a href={links[3]} target="_blank"><img class="h-[45px] w-[45px]" src="/linkedin-contact.svg" alt="Linkedin" /></a>
   </div>
 </div>
