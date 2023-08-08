@@ -10,7 +10,7 @@ import Maps from "../components/Maps/Maps.astro";
     </h1>
     <div class="flex flex-wrap justify-between">
       <div class="mx-auto">
-        <Form client:load/>
+        <Form client:only="react"/>
       </div>
       <div class="mx-auto"><Maps /></div>
     </div>
