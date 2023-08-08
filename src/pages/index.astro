@@ -3,20 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../sections/Hero.astro';
 import Office from '../sections/Office.astro';
 import Goals from '../sections/Goals.astro';
-import Services from '../sections/Services.jsx';
+import Services from '../sections/Services.astro';
 import Contact from '../sections/Contact.astro';
 import Footer from '../components/Footer/Footer.astro';
 ---
 
 <Layout title="Home | Alexsandro Gomes">
-	<main>
+
 		<Hero />
 		<Office />
 		<Goals/>
-		<Services client:load/>
+		<Services/>
 		<Contact/>
 		<Footer />
-	</main>
-</Layout>
 
-../sections/Services.jsx
+</Layout>
