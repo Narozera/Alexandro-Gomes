@@ -63,7 +63,7 @@ function Nav() {
                     </li>
                     <li as="li" className={styles.navbarLink}>
                       <a
-                        href="#sobre-nós"
+                        href="/#sobre-nós"
                         className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
                       >
                         Sobre
@@ -72,7 +72,7 @@ function Nav() {
 
                     <li as="li" className={styles.navbarLink}>
                       <a
-                        href="#contato"
+                        href="/#contato"
                         className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
                       >
                         contato
@@ -155,7 +155,7 @@ function Nav() {
                     </li>
                     <li as="li" className={styles.navbarLink}>
                       <a
-                        href="/sobre-nos"
+                        href="/#sobre-nós"
                         className={`${styles.navbarLink} link link-underline pb-2 text-[1rem]`}
                       >
                         Sobre
@@ -163,7 +163,7 @@ function Nav() {
                     </li>
                     <li as="li" className={styles.navbarLink}>
                       <a
-                        href="/contato"
+                        href="/#contato"
                         className={`${styles.navbarLink} link link-underline pb-2 text-[1rem]`}
                       >
                         contato
