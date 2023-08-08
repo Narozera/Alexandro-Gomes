@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../sections/Hero.astro";
+import Text from "../../components/Text/Text.astro";
+import Footer from "../../components/Footer/Footer.astro";
+---
+
+<Layout title="Serviços | Direito Digital">
+  <Hero client:load />
+  <Text title="Direito Digital">
+    <ul class="my-10">
+      <li class="text-[1.6rem] font-semibold text-[#acbcfc]">
+        Navegando no Cenário Digital em Evolução:
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        O mundo digital apresenta desafios únicos no campo legal. Minha
+        expertise em Direito Digital está aqui para proteger seus interesses.
+      </li>
+    </ul>
+    <ul class="my-10">
+      <li class="text-[1.6rem] font-semibold text-[#acbcfc]">
+        Privacidade e Proteção de Dados:
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        A privacidade online é essencial. Estou preparado para orientá-lo sobre
+        as melhores práticas e garantir a conformidade com as regulamentações de
+        proteção de dados.
+      </li>
+    </ul>
+    <ul class="my-10">
+      <li class="text-[1.6rem] font-semibold text-[#acbcfc]">
+        Propriedade Intelectual e Cibersegurança:
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        Suas criações intelectuais merecem proteção. Minha abordagem rigorosa na
+        área de propriedade intelectual garantirá que seus ativos sejam
+        salvaguardados.
+      </li>
+    </ul>
+  </Text>
+  <Footer />
+</Layout>

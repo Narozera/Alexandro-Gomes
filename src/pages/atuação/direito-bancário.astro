@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../sections/Hero.astro";
+import Text from "../../components/Text/Text.astro";
+import Footer from "../../components/Footer/Footer.astro";
+---
+
+<Layout title="Serviços | Direito Bancário">
+  <Hero client:load />
+  <Text title="Direito Bancário">
+    <ul class="my-10">
+      <li class="text-[1.6rem] font-semibold text-[#acbcfc]">
+        Navegando no Mundo Financeiro com Confiança:
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        No complexo mundo das finanças, é essencial estar bem informado sobre
+        suas opções e direitos.
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        Minha orientação jurídica garantirá que você tome decisões financeiras
+        informadas.
+      </li>
+    </ul>
+    <ul class="my-10">
+      <li class="text-[1.6rem] font-semibold text-[#acbcfc]">
+        Transparência e Responsabilidade Financeira:
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        Bancos e instituições financeiras devem operar com transparência e
+        responsabilidade.
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        Estou aqui para garantir que seus interesses sejam respeitados em todas
+        as transações financeiras.
+      </li>
+    </ul>
+    <ul class="my-10">
+      <li class="text-[1.6rem] font-semibold text-[#acbcfc]">
+        Resolução de Disputas Financeiras:
+      </li>
+      <li class="text-[1.2rem] font-normal text-light my-3">
+        Se você está enfrentando uma disputa financeira, minha experiência em
+        resolução de disputas pode ajudar a alcançar uma solução favorável.
+      </li>
+    </ul>
+  </Text>
+  <Footer />
+</Layout>

@@ -38,7 +38,7 @@ function Nav() {
                   {isOpen || isScrolled ? (
                     <img
                       className="w-[200px] sm:w-auto"
-                      src="logo-footer.svg"
+                      src="/logo-footer.svg"
                       alt="Logo"
                     />
                   ) : (

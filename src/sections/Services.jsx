@@ -1,8 +1,13 @@
----
-import {services} from '../constants/index'
----
 
-<section class="bg-primary p-5" id="serviços">
+import { useState } from 'react'
+import {services} from '../constants/index'
+
+
+
+const Services = () => {
+
+  return (
+    <section class="bg-primary p-5" id="serviços">
     <div class="container mx-auto pb-16">
     <h1 class="font-bold text-light text-[1.8rem] mt-10 text-center lg:text-start">ÁREAS DE ATUAÇÃO</h1>
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
@@ -21,3 +26,7 @@ import {services} from '../constants/index'
         </div>
     </div>
 </section>
+  )
+}
+
+export default Services

@@ -4,42 +4,42 @@ export const services = [
         title: "Direito do Trabalho",
         icon: "/wallet.svg",
         alt: "Mala",
-        link: "#"
+        link: "/atuação/direito-do-trabalho#texto",
     },  
     {
         id: 2,
         title: "Direito do Consumidor",
         icon: "/light.svg",
         alt: "Lâmpada",
-        link: "#"
+        link: "/atuação/direito-do-consumidor#texto"
     },  
     {
         id: 3,
         title: "Direito Empresarial",
         icon: "/company.svg",
         alt: "Empresa",
-        link: "#"
+        link: "/atuação/direito-empresarial#texto"
     },  
     {
         id: 4,
         title: "Direito de Família",
         icon: "/family.svg",
         alt: "Família",
-        link: "#"
+        link: "/atuação/direito-de-família#texto"
     },  
     {
         id: 5,
         title: "Direito Bancário",
         icon: "/bank.svg",
         alt: "Banco",
-        link: "#"
+        link: "/atuação/direito-bancário#texto"
     },  
     {
         id: 6,
         title: "Direito Digital",
         icon: "/wifi.svg",
         alt: "Wifi",
-        link: "#"
+        link: "/atuação/direito-digital#texto"
     },  
 ]
 

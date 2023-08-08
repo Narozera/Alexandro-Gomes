@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../sections/Hero.astro';
 import Office from '../sections/Office.astro';
 import Goals from '../sections/Goals.astro';
-import Services from '../sections/Services.astro';
+import Services from '../sections/Services.jsx';
 import Contact from '../sections/Contact.astro';
 import Footer from '../components/Footer/Footer.astro';
 ---
@@ -13,9 +13,10 @@ import Footer from '../components/Footer/Footer.astro';
 		<Hero />
 		<Office />
 		<Goals/>
-		<Services/>
+		<Services client:load/>
 		<Contact/>
 		<Footer />
 	</main>
 </Layout>
 
+../sections/Services.jsx
