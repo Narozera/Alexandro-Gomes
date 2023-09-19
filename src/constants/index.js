@@ -43,5 +43,5 @@ export const services = [
     },  
 ]
 
-export const links = ["https://api.whatsapp.com/send?phone=5511948422225", "mailto:contato@alexandro.com.com.br.com.br?subject=&body=", "loc", "linkedin", "facebook"
+export const links = ["https://api.whatsapp.com/send?phone=5511948422225", "mailto:contato@alexandro.com.com.br.com.br?subject=&body=", "loc", "linkedin", "https://www.facebook.com/dr.alexsandrogomes", "https://www.instagram.com/dr.alexsandrogomes/"
 ]
