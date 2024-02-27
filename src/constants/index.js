@@ -46,7 +46,7 @@ export const services = [
 export const links = [
   "https://api.whatsapp.com/send?phone=5511948422225",
   "mailto:contato@alexandro.com.com.br.com.br?subject=&body=",
-  "loc",
+  "https://www.google.com/maps/place/Estr.+das+Nações,+411+-+Vila+Iracema,+Barueri+-+SP,+06422-100/data=!4m2!3m1!1s0x94cf03fbd9c8eff5:0xab617d0171bceeb7?sa=X&ved=2ahUKEwiw1rqlmcyEAxUtvJUCHd4ZD9gQ8gF6BAgKEAA",
   "http://linkedin.com/in/adv-alexsandro-gomes",
   "https://www.facebook.com/dr.alexsandrogomes",
   "https://www.instagram.com/dr.alexsandrogomes/",

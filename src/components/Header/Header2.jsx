@@ -32,18 +32,18 @@ function Nav() {
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
-            <div className="flex h-[40px] items-center justify-between">
+            <div className="flex h-[60px] items-center justify-between">
               <div className="flex-shrink-0">
                 <a href="/" aria-label="Logo">
                   {isOpen || isScrolled ? (
                     <img
-                      className="w-[200px] sm:w-auto"
+                      className="w-[400px] sm:w-auto h-[200px]"
                       src="/logo-footer.svg"
                       alt="Logo"
                     />
                   ) : (
                     <img
-                      className="w-[200px] sm:w-auto"
+                      className="w-[400px] sm:w-auto h-[200px]"
                       src="/logo-header2.svg"
                       alt="Logo"
                     />
@@ -56,7 +56,11 @@ function Nav() {
                     <li as="li">
                       <a
                         href="/"
-                        className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
+                        className={
+                          isOpen || isScrolled
+                            ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50`
+                            : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`
+                        }
                       >
                         home
                       </a>
@@ -64,7 +68,11 @@ function Nav() {
                     <li as="li" className={styles.navbarLink}>
                       <a
                         href="/#sobre-nós"
-                        className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
+                        className={
+                          isOpen || isScrolled
+                            ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50`
+                            : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`
+                        }
                       >
                         Sobre
                       </a>
@@ -73,7 +81,11 @@ function Nav() {
                     <li as="li" className={styles.navbarLink}>
                       <a
                         href="/#contato"
-                        className={isOpen || isScrolled ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50` : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`}
+                        className={
+                          isOpen || isScrolled
+                            ? `${styles.navbarLink} link pb-2 text-[1rem] hover:text-[#FFF082] ease-linear transform delay-50`
+                            : `${styles.navbarLink} link pb-2 text-[1rem] hover:text-terciary ease-linear transform delay-50`
+                        }
                       >
                         contato
                       </a>
